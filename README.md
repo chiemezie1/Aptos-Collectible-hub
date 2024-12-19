@@ -42,7 +42,7 @@ We prioritize creators by simplifying NFT uploads, integrating IPFS (via Pinata)
 
 Experience the **Aptos Collectible Hub** live on the **Aptos Testnet**:
 
-🔗 Aptos Collectible Hub Testnet
+🔗  [Aptos Collectible Hub Testnet](https://aptos-collectible-hub.vercel.app/)
 
 ---
 
