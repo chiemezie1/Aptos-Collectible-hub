@@ -29,11 +29,6 @@ interface NFT {
   highestBidder?: string;
 }
 
-const formatDate = (timestamp: number) => {
-  const date = new Date(timestamp * 1000);
-  return date.toLocaleDateString();
-};
-
 export default function Marketplace() {
   const [nfts, setNfts] = useState<NFT[]>([]);
   const [loading, setLoading] = useState(true);

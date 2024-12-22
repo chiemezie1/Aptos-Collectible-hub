@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import Hero from '../components/Hero';
 import FeaturedSection from '../components/FeaturedSection';
 import { motion } from 'framer-motion';

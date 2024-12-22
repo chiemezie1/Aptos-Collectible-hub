@@ -1,0 +1,13 @@
+[package]
+name = "NFTMarketplace_v1"
+version = "0.1.0"
+
+[addresses]
+NFTMarketplace = "0x6b351bc476f9c6c909f86ce554f9ef8dda5a518ecb759190d10894f33f53a035"
+aptos_framework = "0x1"
+primitives = "0xCAFE"
+
+[dependencies]
+AptosFramework = { git = "https://github.com/aptos-labs/aptos-core.git", subdir = "aptos-move/framework/aptos-framework", rev = "main" }
+AptosStdlib = { git = "https://github.com/aptos-labs/aptos-core.git", subdir = "aptos-move/framework/aptos-stdlib", rev = "main" }
+MoveStdlib = { git = "https://github.com/aptos-labs/aptos-core.git", subdir = "aptos-move/framework/move-stdlib", rev = "main" }
