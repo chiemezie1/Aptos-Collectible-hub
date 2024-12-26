@@ -121,7 +121,7 @@ export const fetchNFTs = async (selectedRarity?: number): Promise<NFT[]> => {
   try {
     const response = await client.getAccountResource(
       marketplaceAddr,
-      `${marketplaceAddr}::NFTMarketplace_v4::Marketplace`
+      `${marketplaceAddr}::NFTMarketplace_v1::Marketplace`
     );
     const nftList = (response.data as { nfts: NFT[] }).nfts;
 
@@ -143,7 +143,7 @@ export const fetchNFTs = async (selectedRarity?: number): Promise<NFT[]> => {
 export const isMarketplaceInitialized = async (): Promise<boolean> => {
   try {
     const response = await client.view({
-      function: `${marketplaceAddr}::NFTMarketplace_v4::is_marketplace_initialized`,
+      function: `${marketplaceAddr}::NFTMarketplace_v1::is_marketplace_initialized`,
       type_arguments: [],
       arguments: [marketplaceAddr],
     });
@@ -164,7 +164,7 @@ export const mintNFT = async (
   try {
     const payload: Types.TransactionPayload = {
       type: "entry_function_payload",
-      function: `${marketplaceAddr}::NFTMarketplace_v4::mint_nft`,
+      function: `${marketplaceAddr}::NFTMarketplace_v1::mint_nft`,
       type_arguments: [],
       arguments: [
         marketplaceAddr,
@@ -191,7 +191,7 @@ export const mintNFT = async (
 export const getNFTDetails = async (nftId: string): Promise<NFT | null> => {
   try {
     const response = await client.view({
-      function: `${marketplaceAddr}::NFTMarketplace_v4::get_nft_details`,
+      function: `${marketplaceAddr}::NFTMarketplace_v1::get_nft_details`,
       type_arguments: [],
       arguments: [marketplaceAddr, nftId],
     });
@@ -245,7 +245,7 @@ export const listForSale = async (
     const priceInOctas = price * 100000000;
     const payload: Types.TransactionPayload = {
       type: "entry_function_payload",
-      function: `${marketplaceAddr}::NFTMarketplace_v4::list_for_sale`,
+      function: `${marketplaceAddr}::NFTMarketplace_v1::list_for_sale`,
       type_arguments: [],
       arguments: [marketplaceAddr, nftId, priceInOctas.toString(), isAuction, auctionEnd.toString()],
     };
@@ -266,7 +266,7 @@ export const setPrice = async (nftId: string, newPrice: number): Promise<boolean
     const priceInOctas = newPrice * 100000000;
     const payload: Types.TransactionPayload = {
       type: "entry_function_payload",
-      function: `${marketplaceAddr}::NFTMarketplace_v4::set_price`,
+      function: `${marketplaceAddr}::NFTMarketplace_v1::set_price`,
       type_arguments: [],
       arguments: [marketplaceAddr, nftId, priceInOctas.toString()],
     };
@@ -287,7 +287,7 @@ export const placeBid = async (nftId: string, bidAmount: number): Promise<boolea
     const bidAmountInOctas = bidAmount * 100000000;
     const payload: Types.TransactionPayload = {
       type: "entry_function_payload",
-      function: `${marketplaceAddr}::NFTMarketplace_v4::place_bid`,
+      function: `${marketplaceAddr}::NFTMarketplace_v1::place_bid`,
       type_arguments: [],
       arguments: [marketplaceAddr, nftId, bidAmountInOctas.toString()],
     };
@@ -308,7 +308,7 @@ export const purchaseNFT = async (nftId: string, payment: number): Promise<boole
     const paymentInOctas = payment * 100000000;
     const payload: Types.TransactionPayload = {
       type: "entry_function_payload",
-      function: `${marketplaceAddr}::NFTMarketplace_v4::purchase_nft`,
+      function: `${marketplaceAddr}::NFTMarketplace_v1::purchase_nft`,
       type_arguments: [],
       arguments: [marketplaceAddr, nftId, paymentInOctas.toString()],
     };
@@ -327,7 +327,7 @@ export const purchaseNFT = async (nftId: string, payment: number): Promise<boole
 export const isNFTForSale = async (nftId: string): Promise<boolean> => {
   try {
     const response = await client.view({
-      function: `${marketplaceAddr}::NFTMarketplace_v4::is_nft_for_sale`,
+      function: `${marketplaceAddr}::NFTMarketplace_v1::is_nft_for_sale`,
       type_arguments: [],
       arguments: [marketplaceAddr, nftId],
     });
@@ -341,7 +341,7 @@ export const isNFTForSale = async (nftId: string): Promise<boolean> => {
 export const isNFTForAuction = async (nftId: string): Promise<boolean> => {
   try {
     const response = await client.view({
-      function: `${marketplaceAddr}::NFTMarketplace_v4::is_nft_for_auction`,
+      function: `${marketplaceAddr}::NFTMarketplace_v1::is_nft_for_auction`,
       type_arguments: [],
       arguments: [marketplaceAddr, nftId],
     });
@@ -355,7 +355,7 @@ export const isNFTForAuction = async (nftId: string): Promise<boolean> => {
 export const getNFTPrice = async (nftId: string): Promise<number> => {
   try {
     const response = await client.view({
-      function: `${marketplaceAddr}::NFTMarketplace_v4::get_nft_price`,
+      function: `${marketplaceAddr}::NFTMarketplace_v1::get_nft_price`,
       type_arguments: [],
       arguments: [marketplaceAddr, nftId],
     });
@@ -370,7 +370,7 @@ export const transferOwnership = async (nftId: string, newOwner: string): Promis
   try {
     const payload: Types.TransactionPayload = {
       type: "entry_function_payload",
-      function: `${marketplaceAddr}::NFTMarketplace_v4::transfer_ownership`,
+      function: `${marketplaceAddr}::NFTMarketplace_v1::transfer_ownership`,
       type_arguments: [],
       arguments: [marketplaceAddr, nftId, newOwner],
     };
@@ -389,7 +389,7 @@ export const transferOwnership = async (nftId: string, newOwner: string): Promis
 export const getNFTOwner = async (nftId: string): Promise<string> => {
   try {
     const response = await client.view({
-      function: `${marketplaceAddr}::NFTMarketplace_v4::get_owner`,
+      function: `${marketplaceAddr}::NFTMarketplace_v1::get_owner`,
       type_arguments: [],
       arguments: [marketplaceAddr, nftId],
     });
@@ -403,7 +403,7 @@ export const getNFTOwner = async (nftId: string): Promise<string> => {
 export const getAuctionWinner = async (nftId: string): Promise<string> => {
   try {
     const response = await client.view({
-      function: `${marketplaceAddr}::NFTMarketplace_v4::get_auction_winner`,
+      function: `${marketplaceAddr}::NFTMarketplace_v1::get_auction_winner`,
       type_arguments: [],
       arguments: [marketplaceAddr, nftId],
     });
@@ -417,7 +417,7 @@ export const getAuctionWinner = async (nftId: string): Promise<string> => {
 export const getAllNFTsForOwner = async (ownerAddr: string, limit: number, offset: number): Promise<string[]> => {
   try {
     const response = await client.view({
-      function: `${marketplaceAddr}::NFTMarketplace_v4::get_all_nfts_for_owner`,
+      function: `${marketplaceAddr}::NFTMarketplace_v1::get_all_nfts_for_owner`,
       type_arguments: [],
       arguments: [marketplaceAddr, ownerAddr, limit.toString(), offset.toString()],
     });
@@ -431,7 +431,7 @@ export const getAllNFTsForOwner = async (ownerAddr: string, limit: number, offse
 export const getAllNFTsForSale = async (limit: number, offset: number): Promise<ListedNFT[]> => {
   try {
     const response = await client.view({
-      function: `${marketplaceAddr}::NFTMarketplace_v4::get_all_nfts_for_sale`,
+      function: `${marketplaceAddr}::NFTMarketplace_v1::get_all_nfts_for_sale`,
       type_arguments: [],
       arguments: [marketplaceAddr, limit.toString(), offset.toString()],
     });
@@ -450,7 +450,7 @@ export const getAllNFTsForSale = async (limit: number, offset: number): Promise<
 export const getNFTsInAuction = async (limit: number, offset: number): Promise<ListedNFT[]> => {
   try {
     const response = await client.view({
-      function: `${marketplaceAddr}::NFTMarketplace_v4::get_nfts_in_auction`,
+      function: `${marketplaceAddr}::NFTMarketplace_v1::get_nfts_in_auction`,
       type_arguments: [],
       arguments: [marketplaceAddr, limit.toString(), offset.toString()],
     });
@@ -469,7 +469,7 @@ export const getNFTsInAuction = async (limit: number, offset: number): Promise<L
 export const getNFTsByRarity = async (rarity: number): Promise<string[]> => {
   try {
     const response = await client.view({
-      function: `${marketplaceAddr}::NFTMarketplace_v4::get_nfts_by_rarity`,
+      function: `${marketplaceAddr}::NFTMarketplace_v1::get_nfts_by_rarity`,
       type_arguments: [],
       arguments: [marketplaceAddr, rarity.toString()],
     });
@@ -483,7 +483,7 @@ export const getNFTsByRarity = async (rarity: number): Promise<string[]> => {
 export const getNFTsByListingDate = async (listingDate: number): Promise<string[]> => {
   try {
     const response = await client.view({
-      function: `${marketplaceAddr}::NFTMarketplace_v4::get_nfts_by_listing_date`,
+      function: `${marketplaceAddr}::NFTMarketplace_v1::get_nfts_by_listing_date`,
       type_arguments: [],
       arguments: [marketplaceAddr, listingDate.toString()],
     });
@@ -498,7 +498,7 @@ export const getNFTsByPrice = async (price: number): Promise<string[]> => {
   try {
     const priceInOctas = price * 100000000;
     const response = await client.view({
-      function: `${marketplaceAddr}::NFTMarketplace_v4::get_nfts_by_price`,
+      function: `${marketplaceAddr}::NFTMarketplace_v1::get_nfts_by_price`,
       type_arguments: [],
       arguments: [marketplaceAddr, priceInOctas.toString()],
     });
@@ -513,7 +513,7 @@ export const deleteNFT = async (nftId: string): Promise<boolean> => {
   try {
     const payload: Types.TransactionPayload = {
       type: "entry_function_payload",
-      function: `${marketplaceAddr}::NFTMarketplace_v4::delete_nft`,
+      function: `${marketplaceAddr}::NFTMarketplace_v1::delete_nft`,
       type_arguments: [],
       arguments: [marketplaceAddr, nftId],
     };
