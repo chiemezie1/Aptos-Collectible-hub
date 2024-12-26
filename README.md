@@ -16,7 +16,7 @@ Welcome to **Aptos Collectible Hub**, an innovative NFT marketplace powered by t
 
 ## 🖥 Live Demo
 
-Experience **Aptos Collectible Hub** on the Aptos Testnet:
+Experience **Aptos Collectible Hub** on Vercel:
 
 🔗 [Aptos Collectible Hub Testnet on Vercel](https://aptos-collectible-hub.vercel.app/)
 
