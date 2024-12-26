@@ -1,6 +1,6 @@
 
 // Define Module and Marketplace Address
-address 0x6b351bc476f9c6c909f86ce554f9ef8dda5a518ecb759190d10894f33f53a035 {
+address 0x0520b1af7511f02789a3ecbff59c6f6c98f190774316b7ae3d93b6cd6b029cf4         {
 
     module NFTMarketplace_v1 {
         use 0x1::signer;
@@ -65,6 +65,7 @@ address 0x6b351bc476f9c6c909f86ce554f9ef8dda5a518ecb759190d10894f33f53a035 {
         // Mint A New NFT
         public entry fun mint_nft(
             account: &signer,
+            marketplace_addr: address,
             name: vector<u8>,
             description: vector<u8>,
             uri: vector<u8>,
@@ -73,7 +74,7 @@ address 0x6b351bc476f9c6c909f86ce554f9ef8dda5a518ecb759190d10894f33f53a035 {
         ) acquires Marketplace {
             assert!(royalty_percentage <= MAX_ROYALTY_PERCENTGE, 1000); // Error code 1000: "Royalty percentage cannot exceed 25%"
 
-            let marketplace = borrow_global_mut<Marketplace>(signer::address_of(account));
+            let marketplace = borrow_global_mut<Marketplace>(marketplace_addr);
             let nft_id = vector::length(&marketplace.nfts);
 
             let new_nft = NFT {

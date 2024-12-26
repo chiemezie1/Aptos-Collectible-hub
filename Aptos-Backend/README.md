@@ -35,7 +35,7 @@ Follow these steps to set up your development environment:
     ```bash
     git clone https://github.com/chiemezie1/Aptos-Collectible-hub.git
     cd Aptos-Collectible-hub
-    cd Aptos-NFT-Backend
+    cd Aptos-Backend
     
     ```
     
@@ -55,7 +55,7 @@ At the `Define Module and Marketplace Address` Replace <insert-your-address-here
 The line should look something like this:
 ```
 // Define Module and Marketplace Address
-address 0x6b351bc476f9c6c909f86ce554f9ef8dda5a518ecb759190d10894f33f53a035 {
+address 0x0520b1af7511f02789a3ecbff59c6f6c98f190774316b7ae3d93b6cd6b029cf4 {
     <!-- code -->
 }
 ```
@@ -124,7 +124,7 @@ This will generate artifacts in the `build` directory for deployment.
 
     - **Navigate to Aptos Explorer**:
         
-        Open [Aptos Explorer](https://explorer.aptoslabs.com/?network=testnet) and ensure the network is set to either `testnet` or `devnet` based on the environment you're using.
+        Open [Aptos Explorer devnet](https://explorer.aptoslabs.com/?network=devnet) and ensure the network is set to either `devnet` or `testnet` based on the environment you're using.
         
     - **Search for Your Account**:
         
