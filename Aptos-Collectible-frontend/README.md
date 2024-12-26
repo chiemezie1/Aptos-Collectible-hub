@@ -1,10 +1,10 @@
-# Aptos Collectible Hub
+# 🎨 Aptos Collectible Hub Frontend
 
-Welcome to the **Aptos Collectible Hub** repository! This project is a platform designed for discovering, buying, and selling digital collectibles. Powered by the Aptos blockchain, it combines speed, security, and affordability, offering an unparalleled user experience for creators and collectors alike.
+Welcome to the **Aptos Collectible Hub** repository! This project is a cutting-edge platform for discovering, buying, and selling digital collectibles. Powered by the Aptos blockchain, it combines speed, security, and affordability, offering an unparalleled user experience for creators and collectors alike.
 
----
+![Aptos Collectible Hub Banner](https://example.com/banner-image.jpg)
 
-## Table of Contents
+## 📚 Table of Contents
 
 1. [Overview](#overview)
 2. [Features](#features)
@@ -17,55 +17,46 @@ Welcome to the **Aptos Collectible Hub** repository! This project is a platform 
 9. [Contributing](#contributing)
 10. [License](#license)
 
----
+## 🌟 Overview
 
-## Overview
-
-**Aptos Collectible Hub** is a NFT marketplace that leverages the power of the Aptos blockchain. The platform offers lightning-fast transactions, reduced costs, and a user-friendly interface. It caters to both creators looking to showcase their digital art and collectors seeking unique, high-quality NFTs.
+**Aptos Collectible Hub** is an NFT marketplace that harnesses the power of the Aptos blockchain. The platform offers lightning-fast transactions, reduced costs, and a user-friendly interface. It caters to both creators looking to showcase their digital art and collectors seeking unique, high-quality NFTs.
 
 ### Why Choose Aptos Collectible Hub?
 
-- **Blockchain-backed Security:** Built on the Aptos blockchain for trust and transparency.
-- **Low Fees:** Optimized transaction costs to maximize creator earnings.
-- **Ease of Use:** An intuitive interface for users of all technical backgrounds.
+- 🔒 **Blockchain-backed Security:** Built on the Aptos blockchain for trust and transparency.
+- 💰 **Low Fees:** Optimized transaction costs to maximize creator earnings.
+- 🖱️ **Ease of Use:** An intuitive interface for users of all technical backgrounds.
 
----
+## 🚀 Features
 
-## Features
+- ⚡ **Rapid Transactions:** Experience near-instant transaction speeds with the Aptos blockchain.
+- 🎨 **Comprehensive NFT Management:** Create, send, edit, and manage your NFTs effortlessly.
+- 🔍 **Advanced Search Filters:** Quickly discover collectibles that match your interests.
+- 🏆 **Auction System:** Engage in dynamic bidding for exclusive NFTs.
+- 👛 **Seamless Wallet Integration:** Compatible with Petra Wallet and other major wallets.
 
-- **Rapid Transactions:** Experience near-instant transaction speeds with the Aptos blockchain.
-- **Comprehensive NFT Management:** Create, send, edit, and manage your NFTs effortlessly.
-- **Advanced Search Filters:** Quickly discover collectibles that match your interests.
-- **Auction System:** Engage in dynamic bidding for exclusive NFTs.
-- **Seamless Wallet Integration:** Compatible with Petra Wallet and other major wallets.
-
----
-
-## Prerequisites
+## 📋 Prerequisites
 
 Ensure you have the following tools installed on your system before proceeding:
 
 - **Node.js** (v14.0.0 or later)
 - **npm** (v6.0.0 or later)
-- **Aptos CLI** for blockchain interaction.
-- API keys for **Pinata**  
-    [Signup Pinata](https://auth.pinata.cloud/realms/pinata/protocol/openid-connect/registrations?client_id=pinata-app&response_type=code&scope=openid%20email%20profile&redirect_uri=https%3A%2F%2Fapp.pinata.cloud)
-    Navigate to the api section through the sidebar and create a new project copy the API Key and API Secret
+- **Aptos CLI** for blockchain interaction
+- API keys for **Pinata**
+  - [Signup for Pinata](https://auth.pinata.cloud/realms/pinata/protocol/openid-connect/registrations?client_id=pinata-app&response_type=code&scope=openid%20email%20profile&redirect_uri=https%3A%2F%2Fapp.pinata.cloud)
+  - Navigate to the API section through the sidebar and create a new project
+  - Copy the API Key and API Secret
 
-
----
-
-## Installation
+## 🛠️ Installation
 
 Follow these steps to set up the project locally:
 
-### Frontend Setup
 
 1. Clone the repository:
     
     ```bash
 
-    git clone https://github.com/your-username/Aptos-Collectible-hub.git
+    git clone https://github.com/chiemezie1/Aptos-Collectible-hub.git
     
     ```
     
@@ -93,10 +84,11 @@ Follow these steps to set up the project locally:
 
 ### Backend Setup (Optional)
 Navigate to the backend directory and follow the setup instructions provided in the README.
+**Repository**: [Backend Code](https://github.com/chiemezie1/Aptos-Collectible-hub/tree/main/Aptos-Backend)
 
 ---
 
-## Environment Configuration
+## 🔧 Environment Configuration
 
 Create a `.env` file in the root of the `Aptos-Collectible-frontend` directory with the following variables:
 
@@ -112,7 +104,7 @@ Replace placeholders with your actual configuration values.
 
 ---
 
-## Available Scripts
+## 📜 Available Scripts
 
 Here are the commands available for managing the project:
 
@@ -145,7 +137,7 @@ Here are the commands available for managing the project:
 
 ---
 
-## Project Structure
+## 📁 Project Structure
 
 The repository follows a modular and scalable architecture:
 
@@ -168,7 +160,7 @@ Aptos-Collectible-hub/
 
 ---
 
-## Pages and Modules
+## 📄 Pages and Modules
 
 ### Pages
 
@@ -180,7 +172,7 @@ Aptos-Collectible-hub/
 
 ---
 
-## Contributing
+## 🤝 Contributing
 
 We welcome contributions! Follow these steps to get involved:
 
@@ -215,9 +207,3 @@ We welcome contributions! Follow these steps to get involved:
     
     Submit your branch for review and include a detailed description of the changes.
     
-
----
-
-## License
-
-This project is distributed under the [MIT License](../LICENSE). Feel free to use, modify, and distribute the code within the terms of the license.

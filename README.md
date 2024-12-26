@@ -1,112 +1,100 @@
-# **Aptos Collectible Hub**
+# 🎨 Aptos Collectible Hub
 
-## Revolutionizing the NFT Marketplace with Aptos
+## 🚀 Revolutionizing the NFT Marketplace with Aptos
 
 Welcome to **Aptos Collectible Hub**, an innovative NFT marketplace powered by the **Aptos blockchain**. This repository houses both the **frontend** and **backend** of the project, offering advanced features to simplify the creation, management, and trading of NFTs.
 
----
+![Aptos Collectible Hub Banner](https://github.com/chiemezie1/Aptos-Collectible-hub/blob/main/Aptos-Collectible-frontend/public/banner-image.jpg)
 
-## **Why an NFT Marketplace?**
+## 🌟 Why Choose Aptos Collectible Hub?
 
-NFTs (Non-Fungible Tokens) are transforming the digital landscape, providing unique ownership of digital items such as art, music, and collectibles. An NFT marketplace simplifies the process of buying, selling, and trading NFTs, which is essential for several reasons:
+1. **🔗 Powered by Aptos**: Leverage the speed, security, and scalability of the Aptos blockchain.
+2. **💰 Cost-Effective**: Fast and affordable transactions for both creators and collectors.
+3. **🛠 Advanced Features**: Auctions, NFT editing, and seamless transfers.
+4. **🚀 Scalable**: Built on Aptos' secure network, ready for the growing NFT market.
+5. **🎨 Creator-Centric**: Simplified NFT creation with IPFS integration via Pinata.
 
-1. **Empowering Creators**: Artists can sell directly to buyers, cutting out middlemen and ensuring fair compensation for their work.
-2. **Expanding the Digital Economy**: NFTs are becoming integral in industries like gaming, fashion, and entertainment. A marketplace brings together buyers and sellers in a secure environment.
-3. **Clear Ownership**: NFTs guarantee verifiable ownership, increasing trust and value in digital assets.
-4. **Access to Unique Assets**: Buyers can discover rare items, and sellers gain access to a global audience.
-5. **Decentralization**: Blockchain technology ensures transparency and fairness, removing third-party interference.
+## 🖥 Live Demo
 
----
+Experience **Aptos Collectible Hub** on the Aptos Testnet:
 
-## **Why This Project on Aptos**
+🔗 [Aptos Collectible Hub Testnet on Vercel](https://aptos-collectible-hub.vercel.app/)
 
-### **1. Cost-Effective Solutions**
+## 🎥 Demo Video
 
-By leveraging the Aptos blockchain, transactions are fast and cost-effective, making it appealing for both creators and collectors.
+Watch our NFT Marketplace in action:
 
-### **2. Advanced NFT Features**
+[![Demo Video](https://img.youtube.com/vi/jJo1cdTMc40/0.jpg)](https://youtu.be/jJo1cdTMc40)
 
-The platform offers advanced NFT functionalities such as auctions, editing, and transfers, ensuring versatility for users.
+## 🆕 What's New in Version 1.0
 
-### **3. Scalable and Future-Ready**
+- **📤 IPFS Integration**: Automated NFT uploads to IPFS via Pinata.
+- **🔄 Advanced NFT Management**:
+  - Transfer NFTs between wallets
+  - Edit NFT metadata
+  - Delete NFTs when needed
+- **🏆 Auctions**: Competitive bidding system for NFTs.
+- **🔍 Enhanced Search & Filters**:
+  - Search by name, creator address, or price range
+  - Sort by alphabetical order, listing year, or month
 
-Aptos' secure and scalable network is designed to handle growing traffic and transactions as the NFT market continues to expand.
+## 🔧 Technical Details
 
-### **4. Creator-Centric**
+### Aptos Integration
 
-We prioritize creators by simplifying NFT uploads, integrating IPFS (via Pinata), and automating metadata management, so creators can focus on their work.
+- **Network**: Fully functional on Aptos Testnet
+- **Fullnode URL**: `https://fullnode.testnet.aptoslabs.com/v1`
+- **Marketplace Address**: `0x0520b1af7511f02789a3ecbff59c6f6c98f190774316b7ae3d93b6cd6b029cf4`
 
----
+### Developer Resources
 
-## **Deployed Application**
+- **🚰 Aptos Faucet**: [Get test tokens](https://aptos.dev/en/network/faucet)
+- **🧪 Devnet URL**: `https://fullnode.devnet.aptoslabs.com/v1`
 
-Experience the **Aptos Collectible Hub** live on the **Aptos Testnet**:
+## 🏗 Project Structure
 
-🔗  [Aptos Collectible Hub Testnet](https://aptos-collectible-hub.vercel.app/)
+### Frontend
 
----
+- **Tech Stack**: React
+- **Repository**: [Frontend Code](https://github.com/chiemezie1/Aptos-Collectible-hub/tree/main/Aptos-Collectible-frontend)
+- **Features**:
+  - Responsive design
+  - Intuitive user interface
+  - Blockchain integration
 
-## **Demo Video**
 
-🎥 Watch the **NFT Marketplace Demo** in action!
+### Backend
 
----
+- **Tech Stack**: Move, Aptos cli
+- **Repository**: [Backend Code](https://github.com/chiemezie1/Aptos-Collectible-hub/tree/main/Aptos-Backend)
+- **Features**:
+  - Move smart contract
 
-## **New Features in Version 1.0**
 
-Version 1.0 introduces a variety of features to enhance the NFT marketplace experience:
+## 📚 Documentation
 
-1. **IPFS Integration**
-    - Automates NFT uploads to IPFS via Pinata, securely storing content hashes.
-2. **Advanced NFT Management**
-    - **Transfer NFTs** seamlessly between wallets.
-    - **Edit NFTs** to update metadata.
-    - **Delete NFTs** when no longer needed.
-3. **Auctions**
-    - Enable bidding on NFTs, allowing for competitive offers.
-4. **Enhanced Search & Filters**
-    - Search by **name**, **creator address**, or **price range**.
-    - Sort by **alphabetical order**, **listing year**, or **month**.
+- [Frontend README](https://github.com/chiemezie1/Aptos-Collectible-hub/blob/main/Aptos-Collectible-frontend/README.md)
+- [Backend README](https://github.com/chiemezie1/Aptos-Collectible-hub/blob/main/Aptos-Backend/README.md)
 
----
+## 🤝 Contributing
 
-## **Aptos Integration**
+We welcome contributions to improve Aptos Collectible Hub! Here's how you can help:
 
-- Fully functional on **Aptos Testnet**: [Aptos Fullnode URL](https://fullnode.testnet.aptoslabs.com/v1)
-- **Marketplace Address**: `0xe773b6a7912e162a7a457417dbb9cd26245bd4dacb30d8a28b483767068c17ba`
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
-### **Developer-Focused Features**
 
-- **Aptos Faucet**: Get test tokens for development: [Aptos Faucet](https://aptos.dev/en/network/faucet)
-- **Devnet** URL: [Aptos Devnet](https://fullnode.devnet.aptoslabs.com/v1)
+## 📄 License
 
----
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
 
-## **Frontend and Backend**
+## 📞 Contact
 
-This project consists of both **frontend** and **backend** codebases:
-
-### **Frontend**
-
-- Built with **React** to ensure a responsive and intuitive user experience.
-- [Frontend README](https://github.com/chiemezie1/Aptos-Collectible-hub-frontend#readme)
-
-### **Backend**
-
-- Handles NFT transactions, user interactions, and blockchain integration through robust APIs.
-- [Backend Repository](https://github.com/chiemezie1/Aptos-Collectible-hub-backend)
-
----
-
-## **Key Links**
-
-- **Deployed Site:** Aptos Collectible Hub Testnet
-- **Frontend README:** [Frontend README](https://github.com/chiemezie1/Aptos-Collectible-hub-frontend#readme)
-- **Backend Repository:** [Backend Repo](https://github.com/chiemezie1/Aptos-Collectible-hub-backend)
-- **Aptos Faucet:** [Get Test Tokens](https://aptos.dev/en/network/faucet)
+For any queries or support, please reach out to us at [support@aptoscollectiblehub.com](https://chiemezie-agbo.vercel.app/).
 
 ---
 
-## **Contributing**
-
-We welcome contributions to improve the project! Feel free to open issues or submit pull requests.
+Built with ❤️ by the Aptos Collectible Hub Team
