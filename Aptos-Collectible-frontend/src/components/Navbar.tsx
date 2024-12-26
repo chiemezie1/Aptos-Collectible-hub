@@ -5,7 +5,7 @@ import { WalletSelector } from '@aptos-labs/wallet-adapter-ant-design';
 import { useWallet } from '@aptos-labs/wallet-adapter-react';
 import { AptosClient } from 'aptos';
 
-const client = new AptosClient('https://fullnode.testnet.aptoslabs.com/v1');
+const client = new AptosClient(process.env.REACT_APP_APTOS_FULLNODE_URL!);
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -101,7 +101,7 @@ const Navbar = () => {
                     <ChevronDown className="ml-2 h-4 w-4" />
                   </button>
                   {isDropdownOpen && (
-                    <div className="absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5">
+                    <div className="absolute z-50 right-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5">
                       <div
                         className="py-1"
                         role="menu"
@@ -189,7 +189,7 @@ const Navbar = () => {
                     <ChevronDown className="h-5 w-5" />
                   </button>
                   {isDropdownOpen && (
-                     <div className="mt-2 w-full rounded-md shadow-lg bg-gray-800 ring-1 ring-gray-700 ring-opacity-5">
+                     <div className="z-50 mt-2 w-full rounded-md shadow-lg bg-gray-800 ring-1 ring-gray-700 ring-opacity-5">
                      <div
                        className="py-1"
                        role="menu"

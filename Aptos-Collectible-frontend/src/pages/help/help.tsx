@@ -82,7 +82,7 @@ export default function HelpCenterPage() {
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
-                <a href="#" className="text-blue-400 hover:underline">{article}</a>
+                <a href="/about" className="text-blue-400 hover:underline">{article}</a>
               </motion.li>
             ))}
           </ul>

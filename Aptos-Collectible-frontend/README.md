@@ -47,9 +47,11 @@ Ensure you have the following tools installed on your system before proceeding:
 
 - **Node.js** (v14.0.0 or later)
 - **npm** (v6.0.0 or later)
-- **Git** for version control
 - **Aptos CLI** for blockchain interaction.
-- API keys for **Pinata**
+- API keys for **Pinata**  
+    [Signup Pinata](https://auth.pinata.cloud/realms/pinata/protocol/openid-connect/registrations?client_id=pinata-app&response_type=code&scope=openid%20email%20profile&redirect_uri=https%3A%2F%2Fapp.pinata.cloud)
+    Navigate to the api section through the sidebar and create a new project copy the API Key and API Secret
+
 
 ---
 
@@ -218,4 +220,4 @@ We welcome contributions! Follow these steps to get involved:
 
 ## License
 
-This project is distributed under the [MIT License](https://www.notion.so/LICENSE). Feel free to use, modify, and distribute the code within the terms of the license.
+This project is distributed under the [MIT License](../LICENSE). Feel free to use, modify, and distribute the code within the terms of the license.

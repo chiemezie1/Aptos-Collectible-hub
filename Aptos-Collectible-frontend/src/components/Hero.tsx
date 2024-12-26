@@ -23,6 +23,21 @@ interface NFT {
   highestBidder?: string;
 }
 
+const defaultNFT: NFT = {
+  id: "default",
+  name: "Eternal Cascade",
+  description: "A waterfall that flows endlessly, reflecting the infinite beauty of nature.",
+  uri: "https://fastly.picsum.photos/id/572/200/200.jpg?hmac=YFsNUCQc2Dfz_5O0HY8HmDfquz04XrdcpJ0P4Z7plRY",
+  price: 0,
+  rarity: 1,
+  for_sale: false,
+  owner: "",
+  originalCreator: "",
+  listingDate: 0,
+  royaltyPercentage: 0,
+  is_auction: false
+};
+
 const Hero: React.FC = () => {
   const [nfts, setNfts] = useState<NFT[]>([])
   const [loading, setLoading] = useState(true)
@@ -39,10 +54,11 @@ const Hero: React.FC = () => {
         })
       )
       const validNFTs = fullNFTDetails.filter((nft): nft is NFT => nft !== null)
-      setNfts(validNFTs.slice(0, 5)) // Display up to 5 NFTs
+      setNfts(validNFTs.length > 0 ? validNFTs.slice(0, 5) : [defaultNFT]) // Display up to 5 NFTs or the default NFT
     } catch (err) {
       console.error("Failed to fetch NFTs:", err)
       setError("Failed to load NFTs. Please try again later.")
+      setNfts([defaultNFT]) // Set default NFT on error
     } finally {
       setLoading(false)
     }
@@ -123,20 +139,24 @@ const Hero: React.FC = () => {
                     <HeroNFTCard nft={nfts[currentNFTIndex]} />
                   </motion.div>
                 </AnimatePresence>
-                <button
-                  onClick={prevNFT}
-                  className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full"
-                  aria-label="Previous NFT"
-                >
-                  <ChevronLeft size={24} />
-                </button>
-                <button
-                  onClick={nextNFT}
-                  className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full"
-                  aria-label="Next NFT"
-                >
-                  <ChevronRight size={24} />
-                </button>
+                {nfts.length > 1 && (
+                  <>
+                    <button
+                      onClick={prevNFT}
+                      className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full"
+                      aria-label="Previous NFT"
+                    >
+                      <ChevronLeft size={24} />
+                    </button>
+                    <button
+                      onClick={nextNFT}
+                      className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full"
+                      aria-label="Next NFT"
+                    >
+                      <ChevronRight size={24} />
+                    </button>
+                  </>
+                )}
               </>
             )}
           </div>
@@ -164,6 +184,6 @@ const Hero: React.FC = () => {
     </section>
   )
 }
-
+ 
 export default Hero
 
